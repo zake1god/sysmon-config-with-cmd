@@ -1173,6 +1173,22 @@
 		</ClipboardChange>
 	</RuleGroup>
 	-->
+	
+	<!-- Capture all command lines executed from cmd.exe -->
+	<RuleGroup name="Capture CMD CommandLines" groupRelation="or">
+			<ProcessCreate onmatch="include">
+			<ParentImage condition="is">C:\Windows\System32\cmd.exe</ParentImage>
+			</ProcessCreate>
+	</RuleGroup>
+	
+	<!-- Capture all command lines executed from powershell.exe -->
+	<RuleGroup name="Capture PowerShell CommandLines" groupRelation="or">
+    <ProcessCreate onmatch="include">
+        <ParentImage condition="is">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</ParentImage>
+        <ParentImage condition="is">C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe</ParentImage>
+        <ParentImage condition="is">C:\Windows\System32\pwsh.exe</ParentImage> 
+    </ProcessCreate>
+	</RuleGroup>
 
 	<!--SYSMON EVENT ID 25 : PROCESS TAMPERING [ProcessTampering]-->
 		<!--EVENT 25: "Process Tampering"-->
