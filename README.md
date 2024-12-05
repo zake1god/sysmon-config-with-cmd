@@ -30,33 +30,6 @@ This updated Sysmon configuration file has been customized to improve logging fo
 - Detection of suspicious activity such as unauthorized scripts or commands.
 - Monitoring administrative tasks executed via cmd.exe or PowerShell.
 
-## How to Deploy
-
-1. **Download the Configuration File**:
-   - Use the provided `sysmonconfig-modified-powershell.xml`.
-
-2. **Apply the Configuration**:
-   Run the following command with administrative privileges:
-   ```bash
-   sysmon -c sysmonconfig-modified-powershell.xml
-   ```
-
-3. **Verify Sysmon Service**:
-   Ensure the Sysmon service is running:
-   ```bash
-   sc query sysmon
-   ```
-
-4. **Enable Windows Audit Policies** (optional but recommended):
-   - To capture `CommandLine` details in security logs, enable **Audit Command Line Process Creation**:
-     ```powershell
-     reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit" /v ProcessCreationIncludeCmdLine_Enabled /t REG_DWORD /d 1 /f
-     ```
-   - Apply group policy updates:
-     ```bash
-     gpupdate /force
-     ```
-
 ## Where to Find the Logs
 
 ### CMD Logs
@@ -88,13 +61,13 @@ This configuration is a valuable tool for system administrators and security pro
 ### Install ###
 Run with administrator rights
 ~~~~
-sysmon.exe -i sysmonconfig-export.xml -accepteula
+sysmon.exe -i sysmonconfig-custom-by-zake.xml -accepteula
 ~~~~
 
 ### Update existing configuration ###
 Run with administrator rights
 ~~~~
-sysmon.exe -c sysmonconfig-export.xml
+sysmon.exe -c sysmonconfig-custom-by-zake.xml
 ~~~~
 
 ### Uninstall ###
