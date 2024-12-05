@@ -4,10 +4,10 @@
   Source project:	https://github.com/SwiftOnSecurity/sysmon-config
   Source license:	Creative Commons Attribution 4.0 | You may privatize, fork, edit, teach, publish, or deploy for commercial use - with attribution in the text.
 
-  Fork version:	<N/A>
-  Fork author:	<N/A>
-  Fork project:	<N/A>
-  Fork license:	<N/A>
+  Fork version:	1.0
+  Fork author:	Zaki Zarkasih Al Mustafa
+  Fork project:	https://github.com/zake1god/sysmon-config-with-cmd/
+  Fork license:	Creative Commons Attribution 4.0
 
   REQUIRED: Sysmon version 13 or higher (due to changes in syntax and bug-fixes)
 	https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
