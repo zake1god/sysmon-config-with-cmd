@@ -70,6 +70,26 @@ Run with administrator rights
 sysmon.exe -c sysmonconfig-custom-by-zake.xml
 ~~~~
 
+### Verification ###
+Run with administrator rights
+~~~~
+sc query sysmon
+~~~~
+
+Example of installed Sysmon 
+~~~~
+C:\Sysmon\sysmon-config-with-cmd-master>sc query sysmon
+
+SERVICE_NAME: sysmon
+        TYPE               : 10  WIN32_OWN_PROCESS
+        STATE              : 4  RUNNING
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+~~~~
+
 ### Uninstall ###
 Run with administrator rights
 ~~~~
